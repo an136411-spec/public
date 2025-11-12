@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./signup.css">
+    <script src="./signup.js" defer></script>
+</head>
+<body>
+
+
+  <div class="wrap">
+    
+    <div class="left">
+
+      <div class="left_con">
+        <div class="logo_log">
+          <img src="./img/logo_log.svg">
+        </div>
+        <p class="left_text1">직원용</p>
+        <p class="left_text2">
+          본 페이지는 직원 전용 화면으로,<br>
+          회사 내부 자료와 시스템에 접근할 수 있는 권한을 가진<br>
+          직원들만 이용할 수 있습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="right">
+      <main class="container" aria-labelledby="title">
+
+        <div class="right_top">
+          <h1 id="title" class="title">회원가입</h1>
+          <p id="subtitle" class="subtitle" aria-hidden="true">필수항목이므로 반드시 입력해주시기 바랍니다.</p>
+        </div>
+
+        <form id="signupForm" autocomplete="off" class="signupForm">
+
+          <div class="input-group name_impID">
+            <div class="name_wrap">
+              <label for="name">이름</label>
+              <input id="name" required />
+            </div>
+  
+            <div class="employeeNum_wrap">
+              <label for="employeeNum">사번</label>
+              <input id="employeeNum" minlength="8" maxlength="8" required />
+            </div>
+            <select required id="team" class="team_filter">
+                <option value="all" selected disabled>전체</option>
+                <option value="개발팀">개발팀</option>
+                <option value="보안팀">보안팀</option>
+                <option value="디자인팀">디자인팀</option>
+                <option value="인사팀">인사팀</option>
+                <option value="마케팅팀">마케팅팀</option>
+                <option value="현장조사팀">현장조사팀</option>
+                <option value="설계팀">설계팀</option>
+            </select>
+          </div>
+
+          <div class="input-group phone_wrap">
+            <label for="phone">휴대폰 번호</label>
+            <div class="row">
+              <input id="phone" type="tel" placeholder="010-1234-5678" required />
+              <button type="button" id="checkPhoneBtn" class="dbcheck_Btn">중복확인</button>
+            </div>
+          </div>
+
+          <div class="input-group email_wrap">
+            <label for="email">이메일</label>
+            <input id="email" type="email" placeholder="example@email.com" required />
+          </div>
+
+          <div class="input-group password_wrap">
+            <label for="password">비밀번호</label>
+            <input id="password" type="password" minlength="8" placeholder="8~16자 영문, 숫자, 특수문자 조합" required />
+          </div>
+
+          <div class="input-group password_wrap">
+            <label for="password_check">비밀번호 확인</label>
+            <input id="password_check" type="password" minlength="8" required />
+          </div>
+
+          <div class="under_btn">
+            <button class="cancle-Btn" type="button" id="cancelBtn">취소</button>
+  
+            <button class="submit-Btn" type="submit">가입</button>
+          </div>
+        </form>
+        
+        
+  
+      </main>
+
+    </div>
+    
+  </div>
+
+
+</body>
+</html>

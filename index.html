@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPJ 파트너즈 로그인</title>
+    <link rel="stylesheet" href="./login/login/login.css">
+    <script src="./login/login/login.js" defer></script>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="left">
+      <div class="left_con">
+        <div class="logo_log">
+          <img src="./login/login/img/logo_log.svg">
+        </div>
+        <p class="left_text1">직원용</p>
+        <p class="left_text2">
+          본 페이지는 직원 전용 화면으로,<br>
+          회사 내부 자료와 시스템에 접근할 수 있는 권한을 가진<br>
+          직원들만 이용할 수 있습니다.
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      
+      <main class="login-container" aria-labelledby="title">
+
+        <div class="right_top">
+          <h1 id="title" class="title">로그인</h1>
+          <p id="subtitle" class="subtitle" aria-hidden="true">사번과 비밀번호 입력 후 이용 가능합니다.</p>
+        </div>
+    
+        <!-- <form id="loginForm" onsubmit="event.preventDefault();"> -->
+          <form id="loginForm">
+          <div class="input-group">
+            <label for="employeeNum"></label>
+            <input id="employeeNum" minlength="8" maxlength="8" name="employeeNum" type="text" placeholder="사번" autocomplete="username" required>
+          </div>
+          <div class="input-group">
+            <label for="password"></label>
+            <input id="password" name="password" type="password" placeholder="비밀번호" autocomplete="current-password"
+              required>
+          </div>
+
+          <label>
+              <p class="idsave_check">
+                <input type="checkbox" name="checkbox" value="all">
+                사번 저장
+              </p>
+          </label>
+
+          <button class="login-btn" type="submit">로그인</button>
+        </form>
+    
+        <div class="links" role="navigation" aria-label="보조 링크">
+          <div class="log_link-left">
+            <a href="./login/signup/signup.html">회원가입</a> 
+          </div>
+          <div class="log_link-right">
+            <a href="./login/findid/findId.html">사번 찾기</a>
+            |
+            <a href="./login/resetpw/resetpw.html">비밀번호 찾기/재설정</a>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+    
+  </div>
+</body>
+</html>

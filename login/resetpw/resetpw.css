@@ -1,0 +1,320 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: none;
+}
+a:visited,a:active{
+  color: none;
+}
+ul,li{
+  list-style: none;
+}
+body{
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+}
+.wrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.links {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.links a {
+  color: #1B263B;
+  text-decoration: none;
+  margin: 0 6px;
+}
+.links a:hover {
+  text-decoration: underline;
+}
+.left_con{
+  padding: 40px;
+}
+.logo_log img{
+  width: 100%;
+}
+[type="checkbox"]{
+accent-color: #1b263b;
+}
+.left{
+  width: 30%;
+  text-align: center;
+  color: #fff;
+  background-color: #1B263B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.logo_log{
+  margin-bottom: 7vh;
+}
+.left_text1{
+  font-size: 30px;
+  margin-bottom: 3vh;
+}
+.left_text2{
+  font-size: 14px;
+  width: 100%;
+}
+/* 여기까지 왼쪽 스타일... 로그인페이지 전부 공통 */
+/* 이제 오른쪽 */
+.right{
+  width: 70%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  overflow-y: auto;
+  padding: 40px 0;
+}
+.container {
+  width: 60%;
+  max-width: 540px;
+  height: auto;
+  min-height: fit-content;
+}
+.right_top{
+  width: 100%;
+  text-align: left;
+  margin-bottom: 80px;
+}
+h1 {
+  height: 36px;
+  line-height: 36px;
+  margin: 0 0 2vh 0;
+  font-size: 36px;
+  color: #111;
+}
+#subtitle{
+  font-size: 16px;
+  height: 16px;
+  line-height: 16px;
+  color: #666;
+}
+/* 인풋영역 */
+.input-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+.input-group :nth-last-child{
+  margin-bottom: 0;
+}
+.input-group input:focus {
+  border-color: #1B263B;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, .15);
+}
+label{
+  height: 5vh;
+  max-height: 50px;
+  display: block;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+}
+.input-group label{
+  display: block;
+  font-size: 14px;
+  color: #555;
+  height: 7vh;
+  min-height: 50px;
+  max-height: 50px;
+  min-width: 100px;
+  margin-right: 20px;
+}
+.input-group input{
+  width: 100%;
+  height: 10vh;
+  max-height: 50px;
+  padding: 12px 12px;
+  border: none;
+  border-bottom: 2px solid #d6d9e0;
+  font-size: 16px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.name_wrap,.employeeNum_wrap,.phone_wrap{
+  display: flex;
+  align-items: center;
+}
+.employeeNum_wrap{
+  justify-content: right;
+}
+.name_wrap,.employeeNum_wrap{
+  width: 50%;
+}
+.name_wrap>label,.employeeNum_wrap>label{
+  margin-right: 20px;
+  min-width: 26px;
+}
+/* 취소, 가입 버튼 */
+.under_btn{
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    margin-top: 80px;
+}
+.cancle-Btn,.submit-Btn,.resetpw-Btn{
+  padding: 10px 30px;
+  min-height: 50px;
+  max-height: 50px;
+  font-size: 20px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cancle-Btn{
+  background-color: #fff;
+  color: #1B263B;
+  border: 1px solid #D9D9D9;
+}
+.submit-Btn,.submitBtn,.resetpw-Btn{
+  background-color: #1B263B;
+  color: #fff;
+}
+.login-btn:hover {
+  filter: brightness(.95)
+}
+.resetpw-Btn{
+  display: none;
+}
+.resetpw-Btn.visible{
+  display: block;
+}
+.submit-Btn.invisible{
+  display: none;
+}
+/* 여기까지 */
+
+/* 1. 이름사번 */
+.name_impID{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+}
+.name_impID input{
+  text-align: center;
+}
+.row{
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.row>button{
+  width: 20%;
+  height: 40px;
+}
+
+/* 이하 탭영역 */
+@media screen and (min-width: 918px) and (max-width: 1345px){
+.warp{
+  min-width: 530px;
+  min-height: fit-content;
+}
+.left_con{
+  padding: 30px;
+}
+.left_text1{
+  font-size: 26px;
+}
+.container {
+  width: 70%;
+}
+.right_top{
+  margin-bottom: 70px;
+}
+h1 {
+  height: 32px;
+  line-height: 32px;
+  font-size: 32px;
+}
+.input-group input{
+  padding: 10px;
+}
+.under_btn{
+    margin-top: 70px;
+}
+}
+/* 이하 모바일영역 */
+@media screen and (max-width: 917px){
+body{
+  min-width: 570px;
+}
+.warp{
+  min-width: 530px;
+  min-height: fit-content;
+}
+.left_con{
+  padding: 20px;
+}
+.left_text1{
+  font-size: 20px;
+}
+.right{
+  align-items: start;
+}
+.container {
+  width: 80%;
+}
+.right_top{
+  min-width: 320px;
+  margin-bottom: 50px;
+}
+h1 {
+  height: 28px;
+  line-height:28px;
+  font-size: 28px;
+}
+.input-group label{
+  font-size: 14px;
+  min-height: 50px;
+  max-height: 50px;
+}
+.input-group input{
+  padding: 10px;
+  min-height: fit-content;
+  max-height: 50px;
+  font-size: 14px;
+}
+.cancle-Btn,.submit-Btn,.submitBtn{
+  padding: 10px 20px;
+  font-size: 16px;
+  min-height: 50px;
+  max-height: 50px;
+}
+.under_btn{
+  margin-top: 50px;
+}
+}
+@media (max-width:767px) and (orientation: portrait){
+    body::before {
+        content: "가로모드에서만 이용 가능합니다";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-size: 18px;
+        color: #333;
+        background: #fff;
+    }
+    .wrap {
+        display: none;
+    }
+}

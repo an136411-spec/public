@@ -1,0 +1,300 @@
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.page_content{
+    position: relative;
+    height: 100%;
+}
+.tel_page_in{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content_top{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+}
+/* 팀필터,검색창 */
+.team_filter,.tel_search{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    text-align: left;
+    padding: 12px 15px;
+}
+.team_filter{
+    font-size: 16px;
+    border-radius: 10px;
+    background-image: url(./img/arr_down.svg);
+    border: 1px solid #D9D9D9;
+}
+select {
+    appearance:none /* 화살표 없애기 */
+}
+.tel_search{
+    font-size: 16px;
+    border-radius: 10px;
+
+    border: 1px solid #333;
+    background-image: url(./img/search.svg);
+}
+/* 여기서부터 내꺼 */
+#noResultsMessage{
+    font-size: 20px;
+    font-weight: 400;
+}
+.content_bottom{
+    width: 100%;
+    flex-grow: 1;
+    padding: 10px 0 0 0;
+    overflow: hidden;
+}
+.teamMembers{
+    height:calc(100% - 46px);
+    overflow: scroll;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+}
+.teamMembers::-webkit-scrollbar{display:none;}
+.teamList{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100%, auto);
+    justify-items: center;
+    align-items: center;
+    grid-gap: 10px;
+    row-gap: 20px;
+}
+#teamList::-webkit-scrollbar{display:none;}
+.team{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #F8F8F8;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+}
+.teamInfo{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 10px;
+}
+.teamTitle{
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.teamMemberNum{
+    padding: 5px 8px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.in_team{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.profile{
+    border: 1px solid #D9D9D9;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px;
+    display: block;
+}
+.profile_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #EFEFEF;
+}
+.rank_name{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align:left;
+    margin-left: 10px;
+}
+.profile_info{
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+}
+.profile_info_in{
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    padding: 0 0 0 40px;
+    box-sizing: border-box;
+    margin: 7px 0;
+
+    background-repeat: no-repeat;
+    background-position: left 5px center;
+    background-size: contain;
+}
+.info1{
+    background-image: url(./img/profile_call.svg);
+}
+.info2{
+    background-image: url(./img/profile_p_call.svg);
+}
+.info3{
+    background-image: url(./img/profile_mail.svg);
+}
+.prf_img{
+    width: 40px;
+    height: 40px;
+}
+.chat_img{
+    width: 20px;
+    height: 20px;
+}
+
+.team>.teamMembers>.profile:nth-last-child{
+    margin-bottom: 0;
+}
+
+/* 이하 미디어쿼리 */
+@media screen and (min-width: 1500px){
+.teamTitle{
+    font-size: 18px;
+    font-weight: 600;
+}
+.rank_name{
+font-size: 16px;
+font-weight: 500;
+}
+.team{
+    padding: 15px;
+}
+.profile{
+    padding: 15px 15px;
+}
+}
+.team_filter{
+    padding-right: 35px;
+}
+/* 이하 PC영역 */
+@media screen and (min-width: 1346px) and (max-width: 1499px){
+.teamTitle{
+    font-size: 16px;
+    font-weight: 600;
+}
+.rank_name{
+font-size: 16px;
+font-weight: 500;
+}
+.team{
+    padding: 10px;
+}
+.profile{
+    padding: 15px 15px;
+}
+.team_filter{
+    padding-right: 35px;
+}
+
+}
+/* 이하 탭영역 */
+@media screen and (min-width: 918px) and (max-width: 1345px){
+.team_filter,.tel_search{
+    padding: 10px 13px;
+    font-size: 14px;
+}
+.team_filter,.tel_search{
+    background-position: right 13px center;
+}
+.teamTitle{
+    font-size: 16px;
+    font-weight: 600;
+}
+.rank_name{
+font-size: 14px;
+font-weight: 500;
+}
+.team{
+    padding: 10px;
+}
+.profile{
+    padding: 10px 10px;
+}
+.team_filter{
+    padding-right: 35px;
+}
+.profile_info_in{
+    background-size: 14px;
+}
+#noResultsMessage{
+    font-size: 18px;
+}
+}
+/* 이하 모바일영역 */
+@media screen and (max-width: 917px){
+.team_filter,.tel_search{
+    padding: 8px 11px;
+    font-size: 14px;
+}
+.team_filter,.tel_search{
+    background-position: right 11px center;
+}
+.teamTitle{
+    font-size: 16px;
+    font-weight: 600;
+}
+.rank_name{
+font-size: 14px;
+font-weight: 500;
+}
+.team{
+    padding: 10px;
+}
+.profile{
+    padding: 10px 10px;
+}
+.team_filter{
+    padding-right: 35px;
+}
+.profile_info_in{
+    background-size: 14px;
+}
+#noResultsMessage{
+    font-size: 16px;
+}
+
+}
+
+
+/* 이하 그리드 열 개수 */
+@media screen and (min-width: 1500px){
+
+}
+@media screen and (min-width: 1154px) and (max-width: 1499px){
+.teamList{
+    grid-template-columns: repeat(4, 1fr);
+}
+}
+@media screen and (max-width: 1154px){
+.teamList{
+    grid-template-columns: repeat(3, 1fr);
+}
+}
+

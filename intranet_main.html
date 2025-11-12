@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPJ파트너즈</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="./common/style.css">
+    <link rel="stylesheet" href="./calendar/cal.css">
+    <link rel="stylesheet" href="./dataShare/dataShare.css">
+    <link rel="stylesheet" href="./document/document.css">
+    <link rel="stylesheet" href="./message/msg.css">
+    <link rel="stylesheet" href="./mypage/mp.css">
+    <link rel="stylesheet" href="./tel/tel.css">
+
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script defer type="module" src="./common/js/main.js"></script>
+    <script>
+ 
+    </script>
+
+</head>
+<body>
+    <div class="wrap">
+        <!-- [좌측] -->
+        <header id="mainHeader" class="main_header">
+            <!-- 로고 -->
+            <h1 class="main_logo_wrap">
+                    <a href="#" class="main_logo" id="logo">
+                        <img src="./common/img/main_logo.png" alt="main_logo">
+                    </a>
+            </h1>
+            <!-- 메뉴 -->
+            <nav id="mainMenuWrap" class="main_menu">
+                    <h2 class="main_menu_title">
+                        MENU
+                        <img id="moMenuClose" class="menu_close_icon" src="./common/img/mo_menu_close.svg" alt="x">
+                    </h2>
+                    <ul id="mainMenuList">
+                        <li class="menu on">
+                            <div class="menu_icon">
+                                <img class="menu_icon_img" src="./common/img/calendar_n.svg" alt="calendar">
+                            </div>
+                            <p>캘린더</p>
+                        </li>
+                        <li class="menu">
+                            <div class="menu_icon">
+                                <img class="menu_icon_img" src="./common/img/datashare_w.svg" alt="datashare">
+                            </div>
+                            <p>업무자료공유</p>
+                        </li>
+                        <li class="menu">
+                            <div class="menu_icon">
+                                <img class="menu_icon_img" src="./common/img/docbox_w.svg" alt="docbox">
+                            </div>
+                            <p>결재</p>
+                        </li>
+                        <li class="menu">
+                            <div class="menu_icon">
+                                <img class="menu_icon_img" src="./common/img/messenger_w.svg" alt="messenger">
+                            </div>
+                            <p>메신저</p>
+                        </li>
+                        <li class="menu">
+                            <div class="menu_icon">
+                                <img class="menu_icon_img" src="./common/img/my_w.svg" alt="my">
+                            </div>
+                            <p>개인 페이지</p>
+                        </li>
+                        <li class="menu">
+                            <div class="menu_icon">
+                                <img class="menu_icon_img" src="./common/img/contact_w.svg" alt="contact">
+                            </div>
+                            <p>직원 연락처</p>
+                        </li>
+                    </ul>
+            </nav>
+            <!-- 로그아웃 -->
+            <div id="logoutBtn" class="logout_btn">
+                <div class="logout_icon">
+                    <img src="./common/img/log_out_icon.svg" alt="log_out">
+                </div>
+                <p>로그아웃</p>
+            </div>
+        </header>
+        
+        <div id="menuBg" class="mo_menu_bg"></div>
+        <!-- [우측] -->
+        <main id="mainContent" class="main_content">
+            <!-- 프로필, 알림-->
+            <div id="headerLog" class="header_log">
+                <div id="moMenu" class="mo_menu_icon">
+                    <img src="./common/img/mo_menu_icon.svg" alt="menu">
+                </div>
+                <div class="header_log_right">
+                    <!-- 프로필 -->
+                    <div class="m_profile_wrap" id="profileCard">
+                        <div class="m_profile" id="profileClick">
+                            <div class="m_profile_left">
+                                <div class="m_profile_img">
+                                    <img src="./common/img/profile_icon.svg" alt="profile_img">
+                                </div>
+                                <p id="m_profile_name" class="m_profile_name"></p>
+                            </div>
+                            <div class="m_profile_more">
+                                <img src="./common/img/arr_up.svg" alt="↑">
+                            </div>
+                        </div>
+                        <div class="m_profile_card" id="cardBody">
+                            <div class="profile_card_top">
+                                <h3 id="profile_card_team" class="text_18"></h3>
+                                <button class="profile_card_edit edit_done" id="profileEditBtn">수정</button>
+                            </div>
+    
+                            <div class="profile_card_info_box">
+                                <div class="profile_card_info">
+                                    📞 <p id="profile_card_teamTel" class="profile_card_field" data-type="tel"></p>
+                                </div>
+                                <div class="profile_card_info profile_email">
+                                    📧 <p id="profile_card_email" class="profile_card_field" data-type="email"></p>
+                                </div>
+                                <div class="profile_card_info">
+                                    👨🏻‍💼 <p id="profile_card_mobile" class="profile_card_field" data-type="mobile"></p>
+                                </div>
+                            </div>
+                        </div>      
+                    </div>
+                    <!-- 알림 -->
+                    <div id="bellIconBg" class="bell_icon_bg">
+                        <img class="bell_icon" src="./common/img/bell_navi.png" alt="bell">
+                        <!-- 알림창 -->
+                        <div id="alarmWrap" class="alarm_wrap">
+                            <h2 class="sub_title alarm_title">알림</h2>
+                            <div class="alarm_box">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- 페이지별 컨텐츠 -->
+            <!-- 캘린더 -->
+            <section class="content_wrap page_on">
+                <div class="page_title_wrap">
+                    <h2 class="page_title">캘린더</h2>
+                </div>
+                <div class="page_content cal_page" id="calPage">
+                    <!-- calPage.js -->  
+                    <div class="calendar calendar_1">
+                        <div class="cal_header">
+                            <p class="year_now">2025</p>
+                            <div class="month_box">
+                                <button class="cal_btn prev_btn">
+                                    <img src="./calendar/img/cal_prev.svg" alt="지난 달 이동" class="cal_btn_img">
+                                </button>
+                                    <p class="month_now"></p>
+                                <button class="cal_btn next_btn">
+                                        <img src="./calendar/img/cal_next.svg" alt="다음 달 이동" class="cal_btn_img">
+                                </button>
+                            </div>
+                        </div>
+                        <ul class="weeks">
+                            <li class="sun">일</li>
+                            <li class="mon">월</li>
+                            <li class="tus">화</li>
+                            <li class="wed">수</li>
+                            <li class="thur">목</li>
+                            <li class="fri">금</li>
+                            <li class="sat">토</li>
+                        </ul>
+                        <div class="dates">
+                                    <!-- 날짜표 삽입되는 곳 -->
+                        </div>
+                    </div>
+                        <!-- 스케줄러 -->
+                    <div class="sch_box sch_box_1">
+                            <div class="sch_date_box">
+                                    <div class="date_title">
+                                        <p class="today"></p>
+                                        <span class="week"></span>
+                                    </div>
+                                    <img src="./calendar/img/cal_plus_icon.svg" alt="일정추가" class="add_sch add_sch_1">
+                            </div>
+                            <div id="sch_list_ca">
+                                    <!-- 여기에 today_list 삽입 -->
+                            </div>
+                    </div>    
+                            
+            
+                    <!-- 캘린더 - 일정추가 팝업창 -->
+                    <div class="add_popup add_list_form">
+                        <div class="add_con_box">
+                            <h3 id="edit_sch_title" class="add_title form_title">일정 추가</h3>
+                            <div class="grid">
+                                <label class="label_box sch_input">
+                                    <span class="form_input_title">제목</span>
+                                    <input type="text" placeholder="제목을 입력하세요" id="sch_name_ca" class="input_box form_input">
+                                </label>
+                                <div class="sch_start_end">
+                                    <label class="start_box">
+                                        <span class="form_input_title sch_start">시작</span>
+                                        <input class="form_input date_input" type="date" id="sch_start_ca">
+                                    </label>
+                                    <span class="wave">~</span>
+                                    <label class="fin_box">
+                                        <span class="form_input_title sch_end">종료</span>
+                                        <input class="form_input date_input" type="date" id="sch_end_ca">
+                                    </label>
+                                </div>
+                                <label class="label_box people_list">
+                                    <span class="form_input_title">담당자</span>                            
+                                    <input type="text" id="staff_name_ca" class="input_box form_input" placeholder="담당자명을 입력하세요">
+                                </label>
+                                <label class="label_box color_box">
+                                    <span class="form_input_title">색상</span>                            
+                                    <input class="shc_color" type="color" id="color_picker_ca" value="#D9D9D9">
+                                </label>
+                                <label class="label_box loca_box">
+                                    <span class="form_input_title">위치</span>                                                              
+                                    <input type="text" id="location_ca" class="input_box form_input" placeholder="위치를 입력하세요">
+                                </label>
+                            </div>
+                        </div>
+                        <!-- 일정 등록/취소 버튼 -->
+                        <div class="add_btn_box">
+                            <button class="btn_con cancle_btn cancle_btn_1">취소</button>
+                            <button class="btn_con reg_btn reg_btn_1">등록</button>
+                        </div>
+                    </div>
+            
+                    <!-- 캘린더 - 일정 수정/삭제 팝업창 -->
+                    <div class="fix_popup">
+                        <!-- 일정 수정/삭체 팝업창 나타나는 곳 -->
+                    </div>
+
+                </div>
+            </section>
+    
+            <!-- 업무자료공유 -->
+            <section class="content_wrap">
+                <div class="page_title_wrap">
+                    <h2 class="page_title">업무 자료 공유</h2>
+                </div>
+                <div class="page_content data_page" id="dataPage">
+                    <!-- dataPage.js -->
+                    <!-- 프로젝트폴더 -->
+                    <article class="data_folder_wrap">
+                        <div class="folder_tool">
+                            <p class="sub_title">프로젝트 폴더</p>
+                            <button class="add_folder_btn hover_btn" id="addFolderBtn" aria-haspopup="dialog">
+                                폴더 추가
+                                <img class="plus_icon" src="./dataShare/img/plus.svg" alt="plus">
+                            </button>
+                        </div>
+                        <div class="folder_list swiper folderSwiper">
+                            <ul class="swiper-wrapper" id="folderList"></ul>
+                        </div>
+                    </article>
+
+                    <!-- 최근공유자료 -->
+                    <article class="recent_data ds_recent_data">
+                        <div class="recent_tool">
+                            <p class="sub_title">최근 공유된 자료</p>
+                            <div class="recent_tool_btn">
+                                <button class="add_folder_btn green">
+                                    선택 다운
+                                </button>
+                                <button class="add_folder_btn" id="listDelBtn">
+                                    선택 삭제
+                                </button>
+                                <input class="data_search" id="dataSearchInput" placeholder="search" aria-label="검색어입력">
+                                <button class="add_folder_btn hover_btn" id="openWriteBtn" aria-haspopup="dialog">
+                                    자료 추가
+                                    <img class="plus_icon" src="./dataShare/img/plus.svg" alt="plus">
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 자료목록 -->
+                        <div class="board_wrap">
+                            <div class="board_info">
+                                <label class="board_title board_check">
+                                    <input type="checkbox" id="dataCheckAll">
+                                </label>
+                                <p class="board_title board_category">카테고리</p>                           
+                                <p class="board_title board_name">자료 이름</p>                           
+                                <p class="board_title board_state">상태</p>                           
+                                <p class="board_title board_time">업로드 시간</p>                           
+                            </div>
+                            <div id="dataList"></div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+    
+            <!-- 결재 -->
+            <section class="content_wrap">
+                <div class="page_title_wrap">
+                    <h2 class="page_title">결재</h2>
+                </div>
+                <div class="page_content" id="documentPage">
+                    <!-- documentPage.js -->
+                    <div class="doc_con_box">
+                        <h4 class="sub_title my_doc">내 결재 현황</h4>
+                        <div class="send_con_box">
+                            <div class="send_num_box">
+                                <p class="doc_send">상신</p>
+                                <p class="send_num">7 <span class="doc_num">건</span></p>
+                            </div>
+                            <div class="send_num_box">
+                                <p class="doc_send">수신</p>
+                                <p class="send_num">3 <span class="doc_num">건</span></p>
+                            </div>
+                            <div class="send_num_box">
+                                <p class="doc_send">승인</p>
+                                <p class="send_num">2 <span class="doc_num">건</span></p>
+                            </div>
+                            <div class="send_num_box">
+                                <p class="doc_send">반려</p>
+                                <p class="send_num">2 <span class="doc_num">건</span></p>
+                            </div>
+                            <div class="send_num_box">
+                                <p class="doc_send">대기</p>
+                                <p class="send_num">1 <span class="doc_num">건</span></p>
+                            </div>
+                        </div>
+                    </div>
+                <!-- 최근 열람 문서 -->
+                    <div class="doc_con_box">
+                        <h4 class="sub_title recent_list">최근 열람한 문서</h4>
+                        <article class="folder_wrap">
+                            <div class="list_content">
+                                <!-- 가장 최근에 열람한 문서양식 5개를 나열함 -->
+                                <!-- 데이터 전송받는 곳 -->
+                            </div>
+                        </article>
+                    </div>
+
+
+                    <!-- 결재 목록 -->
+                    <article class="recent_data ds_recent_data">
+                        <div class="recent_tool">
+                            <p class="sub_title">결재목록</p>
+                            <div class="recent_tool_btn">
+                                <button class="add_folder_btn" id="delListBtn">
+                                    선택 삭제
+                                </button>
+                                <input class="data_search" id="docSearchBox" placeholder="search" aria-label="검색어입력">
+                                <button class="add_folder_btn hover_btn" id="addWriteBtn" aria-haspopup="dialog">
+                                    자료 추가
+                                    <img class="plus_icon" src="./dataShare/img/plus.svg" alt="plus">
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 자료목록 -->
+                            <div class="board_wrap author_list">
+                                <div class="author_info">
+                                    <label class="board_title b_check">
+                                        <input type="checkbox" id="checkAllDoc">
+                                    </label>
+                                    <select class="board_title doc_category" id="docCategoryFilter" aria-label="카테고리 필터">
+                                        <option value="전체">카테고리(전체)</option>
+                                        <option value="회의록">회의록</option>
+                                        <option value="휴가신청서">휴가신청서</option>
+                                        <option value="지출결의서">지출결의서</option>
+                                        <option value="근로계약서">근로계약서</option>
+                                    </select>
+                                    <p class="board_title doc_name">자료 이름</p>
+                                    <select class="board_title doc_time" id="docStateFilter" aria-label="진행상태 필터">
+                                        <option value="전체">진행상태(전체)</option>
+                                        <option value="상신">상신</option>
+                                        <option value="수신">수신</option>
+                                        <option value="대기">대기</option>
+                                        <option value="승인">승인</option>
+                                        <option value="반려">반려</option>
+                                    </select>
+                                    <p class="board_title doc_time" id="uploadTime">업로드 시간</p>
+                                </div>
+                                <div id="authorList">
+                                    <!-- authorList.js -->
+                                </div>
+                            </div>
+                    </article>
+
+
+
+                </div>
+            </section>
+    
+            <!-- 메신저 -->
+            <section class="content_wrap">
+                <div class="page_title_wrap">
+                    <h2 class="page_title">메신저</h2>
+                </div>
+                <div class="page_content message_page" id="messagePage">
+                    <!-- messagePage.js -->
+                    <div id="left_box">
+                        <h2 class="sub_title">전체</h2>
+                        <!-- 검색창 -->
+                        <input class="msg_search_box" type="text" id="search" placeholder="Search" aria-label="검색어 입력">
+                        <!-- 메신저 방 목록 -->
+                        <div class="message-list" id="messageList"></div>
+                    </div>
+                    <!-- 오른쪽 메신저 영역 -->
+                    <div id="right_box">
+                        <!-- 메신저방 헤더 영역 -->
+                        <header class="msg_text">
+                            <div class="leftText">
+                                <img src="./message/img/msg.png" class="msg_png" alt="msg.png">
+                                <h3 id="roomName"></h3>
+                            </div>
+                            <img class="menu_tg" id="msg_set" src="./message/img/Menu Vertical.svg" alt="Menu Vertical" style="cursor: pointer;">
+                            <div id="setting" style="display:none;">
+                                <p id="m_alarm" class="set_menu">알람끄기</p>
+                                <p id="m_fix" class="set_menu">상단 고정</p>
+                                <p id="m_exit" class="set_menu">나가기</p>
+                            </div>
+                        </header>
+                        <!-- 메신저 방 -->
+                        <ul id="chatBox" aria-live="polite" aria-busy="false"></ul>
+                        <!-- 작성 및 전송 -->
+                        <form id="chatForm" autocomplete="off">
+                            <input id="chatInput" type="text" placeholder="메시지를 입력하세요." />
+                            <button class="text_18" type="submit" id="submit">전송</button>
+                        </form>
+                    </div>
+
+
+
+
+                </div>
+            </section>
+    
+            <!-- 개인페이지 (캘린더추가하기) -->
+            <section class="content_wrap">
+                <div class="page_title_wrap" id="mp_title" aria-label="개인 페이지 메뉴">
+                    <h2 class="page_title">개인페이지</h2>
+                    <nav class="tabs" role="tablist">
+                        <button class="tab active text_18" role="tab" aria-selected="true" data-tab="schedule">내 일정</button>|
+                        <button class="tab text_18" role="tab" aria-selected="false" data-tab="documents">내 문서</button>
+                    </nav>
+                </div>
+               <div class="page_content my_page" id="myPage">
+                    <!-- myPage.js -->
+                     <!-- 탭 콘텐츠: 내 일정 -->
+
+                     <div class="mp_tab_con" id="schedule" role="tabpanel">
+                         <div class="calendar calendar_2">
+                                     <div class="cal_header">
+                                         <p class="year_now">2025</p>
+                                         <div class="month_box">
+                                             <button class="cal_btn prev_btn">
+                                                 <img src="./calendar/img/cal_prev.svg" alt="지난 달 이동" class="cal_btn_img">
+                                             </button>
+                                                 <p class="month_now"></p>
+                                             <button class="cal_btn next_btn">
+                                                 <img src="./calendar/img/cal_next.svg" alt="다음 달 이동" class="cal_btn_img">
+                                             </button>
+                                         </div>
+                                     </div>
+                                     <ul class="weeks">
+                                         <li class="sun">일</li>
+                                         <li class="mon">월</li>
+                                         <li class="tus">화</li>
+                                         <li class="wed">수</li>
+                                         <li class="thur">목</li>
+                                         <li class="fri">금</li>
+                                         <li class="sat">토</li>
+                                     </ul>
+                                 <div class="dates">
+                                                     <!-- 날짜표 삽입되는 곳 -->
+                                 </div>
+                         </div>
+                         <div class="sch_box">
+                             <div class="sch_date_box">
+                                 <div class="date_title">
+                                     <p class="today"></p>
+                                     <span class="week"></span>
+                                 </div>
+                                 <img src="./calendar/img/cal_plus_icon.svg" alt="일정추가" class="add_sch add_sch_2">
+                             </div>
+                                 <div id="sch_list_mp">
+                                     <!-- 여기에 today_list 삽입 -->
+                                 </div>
+                         </div>
+
+                     </div>
+
+
+                    <!-- 탭 콘텐츠: 내 문서 -->
+                    <div class="mp_tab_con hidden" id="documents" role="tabpanel">
+                        <div class="toolbar" role="region" aria-label="글 도구">
+                            <div class="toolbar-left">
+                                <h2 class="sub_title pageSubT">작성한 글</h2>
+                            </div>
+                            <div class="toolbar-right">
+                                <button id="sel_del" class="add_folder_btn">선택 삭제</button>
+                                    <select id="sortSelect" aria-label="정렬">
+                                        <option value="recent">최신순</option>
+                                        <option value="old">오래된순</option>
+                                        <option value="title">제목순</option>
+                                    </select>
+                                    <input type="text" class="data_search" id="SearchBox" placeholder="Search" aria-label="검색어 입력">
+                                    <button id="add" class="but">자료 추가
+                                        <img class="mp_plus_icon" src="./mypage/img/plus.svg" alt="plus">
+                                    </button>
+                            </div>
+                        </div>
+                            
+                                    <!-- 최근공유자료 -->
+                        <article class="recent_data">
+                                            <!-- 자료목록 -->
+                            <div class="my_board_wrap">
+                                <div class="mp_board_info">
+                                    <label class="board_title b_check">
+                                        <input type="checkbox" id="myCheckAll">
+                                    </label>
+                                    <p class="board_title b_category">카테고리</p>                           
+                                    <p class="board_title b_name">자료 이름</p>                                                   
+                                    <p class="board_title b_time">업로드 시간</p>                           
+                                </div>
+                                <div id="myList"></div>
+                            </div>
+                        </article>     
+                    </div>
+
+                    <!-- 캘린더 - 일정추가 팝업창 -->
+                    <div class="add_popup_mp add_list_form">
+                        <div class="add_con_box">
+                            <h3 class="add_title form_title add_title_mp">개인 일정 추가</h3>
+                            <div class="grid">
+                                <label class="label_box sch_input">
+                                    <span class="form_input_title">제목</span>
+                                    <input type="text" placeholder="제목을 입력하세요" id="sch_name_mp" class="input_box form_input">
+                                </label>
+                                <div class="sch_start_end">
+                                    <label class="start_box">
+                                        <span class="form_input_title sch_start">시작</span>
+                                        <input class="form_input date_input" type="date" id="sch_start_mp">
+                                    </label>
+                                    <span class="wave">~</span>
+                                    <label class="fin_box">
+                                        <span class="form_input_title sch_end">종료</span>
+                                        <input class="form_input date_input" type="date" id="sch_end_mp">
+                                    </label>
+                                </div>
+                                <label class="label_box people_list">
+                                    <span class="form_input_title">담당자</span>                            
+                                    <input type="text" id="staff_name_mp" class="input_box form_input" placeholder="담당자명을 입력하세요">
+                                </label>
+                                <label class="label_box color_box">
+                                    <span class="form_input_title">색상</span>                            
+                                    <input class="shc_color" type="color" id="color_picker_mp" value="#D9D9D9">
+                                </label>
+                                <label class="label_box loca_box">
+                                 <span class="form_input_title">위치</span>                                                              
+                                    <input type="text" id="location_mp" class="input_box form_input" placeholder="위치를 입력하세요">
+                                </label>
+                            </div>
+                                    <!-- 일정 등록/취소 버튼 -->
+                                <div class="add_btn_box">
+                                    <button class="btn_con cancle_btn cancle_btn_2">취소</button>
+                                    <button class="btn_con reg_btn reg_btn_2">등록</button>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- 캘린더 - 일정 수정/삭제 팝업창 -->
+                    <div class="fix_popup_mp">
+                        <!-- 일정 수정/삭체 팝업창 나타나는 곳 -->
+                    </div>
+            
+               </div>
+            </section>
+    
+            <!-- 직원연락처 -->
+            <section class="content_wrap">
+                <div class="page_title_wrap">
+                    <h2 class="page_title">직원연락처</h2>
+                </div>
+                <div class="page_content" id="telPage">
+                    <!-- telPage.js -->
+                     <article class="tel_page_in">
+        <!-- 옆쪽 필터 & 검색창 -->
+                        <div class="content_top">
+                            <select id="teamFilter" class="team_filter">
+                                <option value="all">전체</option>
+                                <option value="개발팀">개발팀</option>
+                                <option value="보안팀">보안팀</option>
+                                <option value="디자인팀">디자인팀</option>
+                                <option value="인사팀">인사팀</option>
+                                <option value="마케팅팀">마케팅팀</option>
+                                <option value="현장조사팀">현장조사팀</option>
+                                <option value="설계팀">설계팀</option>
+                            </select>
+                            <input type="text" id="searchInput" placeholder="search" aria-label="직원 검색" class="tel_search">
+                        </div>
+                        <!-- 각 페이지별 내용 -->
+                        <div class="content_bottom">
+                            <p id="noResultsMessage" style="display:none;">검색결과가 없습니다.</p>
+                            <div id="teamList" class="teamList"></div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+    
+    
+    
+        
+    
+             <!-- 자료공유 - 폴더추가 폼 -->
+            <dialog class="add_folder_form" id="addFolderDlg">
+                <form id="addFolderForm" method="dialog">
+                    <header>
+                        <h3 class="form_title">폴더 추가</h3>
+                    </header>
+                    <label class="form_label">
+                        <span class="form_input_title">폴더명</span>
+                        <input class="form_input" name="title" id="folderTitle" required placeholder="폴더명을 입력해주세요">
+                    </label>
+                    <div class="form_button_wrap">
+                        <button class="form_button" id="cancelBtn" type="button">취소</button>
+                        <button id="saveBtn" class="form_button green">저장</button>
+                    </div>
+                </form>
+            </dialog>
+    
+            <!-- 자료공유 - 자료 보기 -->
+            <dialog class="view_dlg" id="viewDlg">
+                    <div class="dlg">
+                        <header>
+                            <p class="view_category" id="viewCategory">
+                                <!-- 카테고리보이기 -->
+                            </p>
+                            <h2 class="view_title" id="viewTitle">
+                                <!-- 제목보이기 -->
+                            </h2>
+                        </header>
+                        <div class="body">
+                            <div class="meta">
+                                <p id="viewMeta"></p>
+                                <div>
+                                    <button class="ghost" id="editBtn">수정</button>
+                                    <button class="ghost" id="deleteBtn">삭제</button>
+                                </div>
+                            </div>
+    
+                            <pre class="view_file" id="viewFile">
+                                <!-- 파일보이기 -->
+                            </pre>
+                            <pre class="view_con" id="viewContent">
+                                <!-- 게시글보이기 -->
+                            </pre>
+                            <div class="form_button_wrap">
+                                <button class="form_button" id="closeViewBtn">닫기</button>
+                            </div>
+                        </div>
+                        
+                    </div>  
+            </dialog>
+    
+            <!-- 자료공유, 마이페이지 - 자료 추가 입력 폼 -->
+            <dialog class="add_list_form" id="formDlg">
+                <form id="postForm" method="dialog">
+                    <!-- 폼 타이틀 -->
+                    <header>
+                        <h2 class="form_title" id="formTitle">게시글 작성</h2>
+                    </header>
+    
+                    <!-- 작성자 정보 -->
+                    <div class="form_author_info">
+                        <div class="author_img">
+                            <img src="./common/img/profile_icon.svg" alt="profile">
+                        </div>
+                        <div class="author_name" id="authorName"></div>
+                    </div>
+    
+                    <!-- 폼 내용 (grid 안에서만 추가/삭제) -->
+                    <!-- 인풋 추가 시 class="form_input" 기입 -->
+                    <div class="grid">
+    
+                        <!-- 카테고리, 제목 -->
+                        <div class="list_info">
+ 
+                            <!-- 카테고리 선택 -->
+                            <select class="form_select data_category" name="category" id="category">
+                                <option value="건축">건축</option>
+                                <option value="리테일">리테일</option>
+                                <option value="인테리어">인테리어</option>
+                                <option value="도시환경">도시환경</option>
+                                <option value="산업시설">산업시설</option>
+                            </select>
+    
+                            <!-- 글 제목 입력 -->
+                            <input class="form_input" name="title" id="title" required placeholder="글 제목을 입력해주세요.">
+                        </div>
+    
+                        <!-- 파일 첨부 -->
+                        <div class="upload_file_box">
+                            <input class="form_input" id="uploadName" placeholder="첨부파일이 없습니다.">
+                            <label class="upload_file_Btn">
+                                <span>파일찾기</span>
+                                <input type="file" id="file">
+                            </label> 
+                        </div>
+                        
+                        
+                        <!-- 설명 입력 -->
+                        <label>
+                            <textarea class="textarea_content" id="content" name="content" placeholder="내용을 입력해주세요." required></textarea>
+                        </label>
+    
+                    </div>
+    
+                    <!-- 폼 버튼 -->
+                    <div class="form_button_wrap">
+                        <button class="form_button" id="cancle" type="button">취소</button>
+                        <button class="form_button green" id="submitBtn" value="default">저장</button>
+                    </div>
+                    <input type="hidden" name="postId" id="postId">
+                </form>      
+            </dialog>
+
+            <!-- 결재 - 자료 추가 입력 폼 -->
+            <dialog class="add_list_form" id="formDlgDoc">
+                <form id="postFormDoc" method="dialog">
+                    <!-- 폼 타이틀 -->
+                    <header>
+                        <h2 class="form_title" id="formTitleDoc">게시글 작성</h2>
+                    </header>
+    
+                    <!-- 작성자 정보 -->
+                    <div class="form_author_info">
+                        <div class="author_img">
+                            <img src="./common/img/profile_icon.svg" alt="profile">
+                        </div>
+                        <div class="author_name" id="authorNameDoc"></div>
+                    </div>
+    
+                    <!-- 폼 내용 (grid 안에서만 추가/삭제) -->
+                    <!-- 인풋 추가 시 class="form_input" 기입 -->
+                    <div class="grid">
+    
+                        <!-- 카테고리, 제목 -->
+                        <div class="list_info">
+    
+                            <select class="form_select" name="categoryDoc" id="categoryDoc">
+                                <option value="회의록">회의록</option>
+                                <option value="휴가신청서">휴가신청서</option>
+                                <option value="지출결의서">지출결의서</option>
+                                <option value="근로계약서">근로계약서</option>
+                            </select>
+    
+                            <!-- 글 제목 입력 -->
+                            <input class="form_input" name="title" id="titleDoc" required placeholder="글 제목을 입력해주세요.">
+                        </div>
+    
+                        <!-- 파일 첨부 -->
+                        <div class="upload_file_box">
+                            <input class="form_input" id="uploadNameDoc" placeholder="첨부파일이 없습니다.">
+                            <label class="upload_file_Btn">
+                                <span>파일찾기</span>
+                                <input type="file" id="fileDoc">
+                            </label> 
+                        </div>
+                        
+                        
+                        <!-- 설명 입력 -->
+                        <label>
+                            <textarea class="textarea_content" id="contentDoc" name="content" placeholder="내용을 입력해주세요." required></textarea>
+                        </label>
+    
+                    </div>
+    
+                    <!-- 폼 버튼 -->
+                    <div class="form_button_wrap">
+                        <button class="form_button" id="cancleDoc" type="button">취소</button>
+                        <button class="form_button green" id="submitBtnDoc" value="default">저장</button>
+                    </div>
+                    <input type="hidden" name="postId" id="postIdDoc">
+                </form>      
+            </dialog>
+        </main>
+
+    </div>
+
+
+
+    
+</body>
+</html>

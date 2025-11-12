@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 재설정</title>
+    <link rel="stylesheet" href="./resetpw.css">
+    <script src="./resetpw.js" defer></script>
+</head>
+<body>
+
+
+  <div class="wrap">
+    <div class="left">
+      <div class="left_con">
+        <div class="logo_log">
+          <img src="./img/logo_log.svg">
+        </div>
+        <p class="left_text1">직원용</p>
+        <p class="left_text2">
+          본 페이지는 직원 전용 화면으로,<br>
+          회사 내부 자료와 시스템에 접근할 수 있는 권한을 가진<br>
+          직원들만 이용할 수 있습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="right">
+        
+      <main class="container" aria-labelledby="title">
+
+        <div class="right_top">
+          <h1 id="title" class="title">비밀번호 찾기 및 재설정</h1>
+          <p id="subtitle" class="subtitle" aria-hidden="true">필수항목이므로 반드시 입력해주시기 바랍니다.</p>
+        </div>
+
+        <form id="resetPwForm" autocomplete="off" class="resetPwForm">
+
+          <div class="input-group name_impID">
+            <div class="name_wrap">
+              <label for="name">이름</label>
+              <input id="name" required />
+            </div>
+  
+            <div class="employeeNum_wrap">
+              <label for="employeeNum">사번</label>
+              <input id="employeeNum" minlength="8" maxlength="8" required />
+            </div>
+          </div>
+
+          <div class="input-group phone_wrap">
+            <label for="phone">전화번호</label>
+            <input id="phone" placeholder="010-1234-5678" required />
+          </div>
+
+          <div class="input-group pw_wrap">
+            <label for="password">새 비밀번호</label>
+            <input id="password" type="password" minlength="8" maxlength="16" placeholder="8~16자 영문, 숫자, 특수문자 조합" required />
+          </div>
+
+          <div class="input-group pw_wrap">
+            <label for="password_check">새 비밀번호 확인</label>
+            <input id="new_password" type="password" minlength="8" maxlength="16" required />
+          </div>
+
+          <div class="under_btn">
+            <button class="cancle-Btn" type="button" id="cancelBtn">취소</button>
+            <button type="submit" class="submit-Btn">찾기 및 재설정</button>
+          </div>
+        </form>
+        
+
+      </main>
+
+    </div>
+    
+  </div>
+
+</body>
+</html>

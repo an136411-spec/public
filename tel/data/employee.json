@@ -1,0 +1,184 @@
+{
+
+  "departments" : [
+        {
+            "team": "개발팀",
+            "teamTel":"(051)111-1111",
+            "members":[
+                {
+                "name": "이개발",
+                "rank": "대리",
+                "employeeNum": "12345678",
+                "tel": "(051)-1234-5678",
+                "phone": "010-1234-5678",
+                "email": "example@email.com"
+                },
+                {
+                "name": "이새발",
+                "rank": "사원",
+                "employeeNum": "12345678",
+                "tel": "(051)-1234-5678",
+                "phone": "010-1234-5678",
+                "email": "example@email.com"
+                }
+            ]
+        },
+        {
+            "team": "보안팀",
+            "teamTel":"(051)222-2222",
+            "members":[
+                {
+                    "name": "나경호",
+                    "rank": "팀장",
+                    "employeeNum": "12345678",
+                    "tel": "(051)-1234-5678",
+                    "phone": "010-1234-5678",
+                    "email": "example@email.com"
+                },
+                {
+                    "name": "다경호",
+                    "rank": "팀장",
+                    "employeeNum": "12345678",
+                    "tel": "(051)-1234-5678",
+                    "phone": "010-1234-5678",
+                    "email": "example@email.com"
+                },
+                {
+                    "name": "김경호",
+                    "rank": "팀장",
+                    "employeeNum": "12345678",
+                    "tel": "(051)-1234-5678",
+                    "phone": "010-1234-5678",
+                    "email": "example@email.com"
+                }
+            ]
+        },
+        {
+            "team": "디자인팀",
+            "teamTel":"(051)333-3333",
+            "members":[
+                {
+                    "name": "최디자인",
+                    "rank": "대리",
+                    "employeeNum": "12345678",
+                    "tel": "(051)-1234-5678",
+                    "phone": "010-1234-5678",
+                    "email": "example@email.com"
+                }
+            ]
+        },
+        {
+            "team": "인사팀",
+            "teamTel":"(051)444-4444",
+            "members":[
+                {
+                    "name": "송인사",
+                    "rank": "대리",
+                    "employeeNum": "12345678",
+                    "tel": "(051)-1234-5678",
+                    "phone": "010-1234-5678",
+                    "email": "example@email.com"
+                },
+                {
+                    "name": "인사불성",
+                    "rank": "주임",
+                    "employeeNum": "12345678",
+                    "tel": "(051)-1234-5678",
+                    "phone": "010-1234-5678",
+                    "email": "example@email.com"
+                },
+                {
+                    "name": "님인사",
+                    "rank": "사원",
+                    "employeeNum": "12345678",
+                    "tel": "(051)-1234-5678",
+                    "phone": "010-1234-5678",
+                    "email": "example@email.com"
+                }
+            ]
+        },
+        {
+            "team": "마케팅팀",
+            "teamTel":"(051)555-5555",
+            "members":[
+                {
+                    "name": "차마케팅",
+                    "team": "마케팅팀",
+                    "rank": "주임",
+                    "employeeNum": "12345678",
+                    "tel": "(051)-1234-5678",
+                    "phone": "010-1234-5678",
+                    "email": "example@email.com"
+                }
+            ]
+        },
+        {
+            "team": "현장조사팀",
+            "teamTel":"(051)666-6666",
+            "members":[
+                {
+                "name": "나현장",
+                "rank": "사원",
+                "employeeNum": "12345678",
+                "tel": "(051)-1234-5678",
+                "phone": "010-1234-5678",
+                "email": "example@email.com"
+                },
+                {
+                "name": "현장법사",
+                "rank": "팀장",
+                "employeeNum": "12345678",
+                "tel": "(051)-1234-5678",
+                "phone": "010-1234-5678",
+                "email": "example@email.com"
+                }
+            ]
+        },
+        {
+            "team": "설계팀",
+            "teamTel":"(051)777-7777",
+            "members":[
+                {
+                "name": "한설계",
+                "rank": "과장",
+                "employeeNum": "12345678",
+                "tel": "(051)-1234-5678",
+                "phone": "010-1234-5678",
+                "email": "example@email.com"
+                },
+                {
+                "name": "김캐드",
+                "rank": "차장",
+                "employeeNum": "12345678",
+                "tel": "(051)-1234-5678",
+                "phone": "010-1234-5678",
+                "email": "example@email.com"
+                },
+                {
+                "name": "인생설계",
+                "rank": "부장",
+                "employeeNum": "12345678",
+                "tel": "(051)-1234-5678",
+                "phone": "010-1234-5678",
+                "email": "example@email.com"
+                },
+                {
+                "name": "다설계",
+                "rank": "사원",
+                "employeeNum": "12345678",
+                "tel": "(051)-1234-5678",
+                "phone": "010-1234-5678",
+                "email": "example@email.com"
+                },
+                {
+                "name": "설계자 론",
+                "rank": "사이퍼",
+                "employeeNum": "12345678",
+                "tel": "(051)-1234-5678",
+                "phone": "010-1234-5678",
+                "email": "example@email.com"
+                }
+            ]
+        }
+    ]
+}
